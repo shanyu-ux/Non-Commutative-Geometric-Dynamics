@@ -8,8 +8,8 @@ Implementation of the Jacobian Oracle and Riemannian Gradient Correction for adv
 [![License](https://img.shields.io/badge/License-MIT-green)]()
 
 ## Abstract
-
-Modern adversarial training operates under a "Euclidean Illusion"—assuming that the steepest ascent direction is given by the Euclidean gradient $\nabla_{Euc} \mathcal{L}$. On curved data manifolds, this assumption fails, leading to a misalignment between the attack vector and the data geometry.
+![Riemannian vs Euclidean Flow](./manifold_vis.png)
+*Figure 1: The Euclidean Illusion (Red) vs. The Riemannian Correction (Cyan). Note how the corrected flow respects the manifold's curvature.*Modern adversarial training operates under a "Euclidean Illusion"—assuming that the steepest ascent direction is given by the Euclidean gradient $\nabla_{Euc} \mathcal{L}$. On curved data manifolds, this assumption fails, leading to a misalignment between the attack vector and the data geometry.
 
 This repository implements the **Riemannian Adversary**, a theoretically rigorous algorithm that corrects this flaw. By explicitly computing the **Jacobian Pullback Metric** $G(x)$, we recover the true gradient flow on the manifold.
 
